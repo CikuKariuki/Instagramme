@@ -10,9 +10,7 @@ def posts(request):
 def search_results(request):
     if 'post' in request.GET and request.GET["post"]:
         search_term = request.GET.get("posts")
-        searched_posts = Posts.search_by_profile(search_term)
         searched_posts = Posts.search_by_tag(search_term)
-        searched_posts = Profile.search_by_username(search_term)
         message = f"{search_term}"
         return render(request,'search.html',{"message":message,"posts":searched_posts})
 

@@ -22,10 +22,10 @@ class Profile(models.Model):
     def save_profile(self):
         self.save()
 
-    @classmethod
-    def search_by_username(cls,search_term):
-        profile = cls.objects.filter(username__icontains=search_term)
-        return profile
+    # @classmethod
+    # def search_by_username(cls,search_term):
+    #     profile = cls.objects.filter(username__icontains=search_term)
+    #     return profile
 
 class Posts(models.Model):
     # images = models.ImageField(upload_to_posts.html)
@@ -36,10 +36,10 @@ class Posts(models.Model):
     # def save_posts(self):
     #     self.save()
 
-    @classmethod
-    def search_by_profile(cls,search_term):
-        posts = cls.objects.filter(profile__icontains=search_term)
-        return posts
+    # @classmethod
+    # def search_by_profile(cls,search_term):
+    #     posts = cls.objects.filter(profile__icontains=search_term)
+    #     return posts
 
     @classmethod
     def search_by_tag(cls,search_term):
