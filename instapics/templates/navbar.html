@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+        {% if title %}
+        <title>Instagramme {{title}}</title>
+        {% else %}
+        <title>Instagramme</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            <nav class="navbar navbar-default navigation-clean">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Instagramme</a>
+                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navcol-1" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active" role="presentation">
+                                <a href="#">Profile</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">Explore</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">Sign out</a>
+                            </li>
+                            <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+                                Dropdown
+                                <span class="caret"></span>
+                            </a> 
+                            <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation">
+                                        <a href="#">First item</a>
+                                    </li> 
+                                    <li role="presentation">
+                                        <a href="#">Second item</a>
+                                    </li>   
+                                    <li role="presentation">                               <li role="presentation">
+                                        <a href="#">First item</a>
+                                    </li>   
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>
