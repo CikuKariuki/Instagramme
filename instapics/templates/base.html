@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>Instagramme {{title}}</title>
+        {% else %}
+        <title>Instagramme</title>
+        {% endif %}
+    </head>
+    <body>
+        {% block content %}
+        <h1>Working base html</h1>
+        {% endblock %}
+    </body>
+</html>
