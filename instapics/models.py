@@ -27,5 +27,5 @@ class Posts(models.Model):
     profile = models.ForeignKey(Profile)
     tag = models.ManyToManyField(tag)
 
-    # def save_posts(self):
+    # def save_post(self):
     #     self.save()
