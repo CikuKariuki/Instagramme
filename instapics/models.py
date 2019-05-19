@@ -18,10 +18,14 @@ class Profile(models.Model):
     class Meta:
         ordering = ['username']
 
+    def save_profile(self):
+        self.save()
+
 class Posts(models.Model):
     # image = models.ImageField(upload_to_posts.html)
     caption = models.TextField()
     profile = models.ForeignKey(Profile)
     tag = models.ManyToManyField(tag)
 
-    
+    # def save_posts(self):
+    #     self.save()
