@@ -23,10 +23,10 @@ class Profile(models.Model):
         self.save()
 
 class Posts(models.Model):
-    # image = models.ImageField(upload_to_posts.html)
+    # images = models.ImageField(upload_to_posts.html)
     caption = models.TextField()
     profile = models.ForeignKey(Profile)
     tag = models.ManyToManyField(tag)
 
-    # def save_post(self):
+    # def save_posts(self):
     #     self.save()
