@@ -6,7 +6,12 @@ class tag(models.Model):
     def __str__(self):
         return self.tag
 
-        
+ class Posts(models.Model):
+    # image = models.ImageField(upload_to_posts.html)
+    caption = models.TextField()
+    profile = models.ForeignKey(Profile)
+    tag = models.ManyToManyField(tag)
+
 class Profile(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length = 100)
