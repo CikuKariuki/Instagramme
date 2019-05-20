@@ -28,7 +28,7 @@ class Profile(models.Model):
     #     return profile
 
 class Posts(models.Model):
-    # images = models.ImageField(upload_to_posts.html)
+    images = models.ImageField(upload_to='posts/')
     caption = models.TextField()
     profile = models.ForeignKey(Profile)
     tag = models.ManyToManyField(tag)
@@ -43,5 +43,5 @@ class Posts(models.Model):
 
     @classmethod
     def search_by_tag(cls,search_term):
-        posts = cls.objects.filter(tag__icontains=search_term)
+        posts = cls.objects.filter(tag__tag__icontains=search_term)
         return posts
