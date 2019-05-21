@@ -51,7 +51,7 @@ class Profile(models.Model):
 class Posts(models.Model):
     images = models.ImageField(upload_to='posts/')
     caption = models.TextField()
-    profile = models.ForeignKey(Profile)
+    profile = models.ForeignKey(User,on_delete=models.CASCADE)
     tag = models.ManyToManyField(tag)
 
     # def save_posts(self):
