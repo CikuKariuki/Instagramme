@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+from django.contrib.auth.decorators import login_required
 
 
 class tag(models.Model):
@@ -67,16 +68,4 @@ class Posts(models.Model):
         return posts
 
 
-class Comments(models.Model):
-    comments = models.CharField(max_length=100)
-    user_id = models.ForeignKey(
-        User, blank=True, on_delete=models.CASCADE, related_name='user', null=True)
-    posts_id = models.ForeignKey(
-        Posts, blank=True, on_delete=models.CASCADE, related_name='posts_comments', null=True)
 
-    class Meta:
-        verbose_name_plural = 'Comments'
-
-    def __str__(self):
-        return self.comments
-from django.contrib.auth.decorators import login_required
