@@ -8,12 +8,12 @@ Wanjiku Kariuki
 An instagram clone. A user can sign up, log in and upload photos.
 
 ## Setup Instructions:
-1.Fork the repository to your work space.
-2.Click on clone or download
-3.Run the git clone <'link copied'> on your terminal.
-4.Create a database and link it via settings.
-5.Makemigrations and migrate.
-6.Use the command python3.6 manage.py runserver to open the project on your browser.
+| 1.Fork the repository to your work space. |
+| 2.Click on clone or download. |
+| 3.Run the git clone <'link copied'> on your terminal. |
+| 4.Create a database and link it via settings. |
+| 5.Makemigrations and migrate. |
+| 6.Use the command python3.6 manage.py runserver to open the project on your browser. |
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ Python 3.6, Django
 | Load website | website url | View posts,the person who uploaded|
 | Show caption | Click on post  | See the post close up |
 | Search by tag | A tag name | All pictures with that tag |
-| Click on name on navbar | clicking onn far right of navbar | Redirected to your own profile |
+| Click on name on navbar | clicking on far right of navbar | Redirected to your own profile |
 
 
 ## Requirements
