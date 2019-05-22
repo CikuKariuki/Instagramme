@@ -14,12 +14,20 @@
     {% endblock %}
 </head>
 <body>
+    <div class="row">
+        
+        <div class="form-group">
+        <div class="container center_div">
     <form action="{% url 'new_post' %"} method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        
         {% bootstrap_form form %}
         <input type="submit" class="btn btn-success btn-lg" value="Post"> 
     </form>
-
+    
+</div>
+</div>
+</div>
     {% block scripts %}
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

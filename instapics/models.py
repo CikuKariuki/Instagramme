@@ -49,7 +49,9 @@ class Profile(models.Model):
         profile = Profile.objects.filter(user = id).first()
         return profile
 
-    
+  
+
+
     def __str__(self):
         return self.first_name
 
@@ -69,6 +71,8 @@ class Posts(models.Model):
     def search_by_tag(cls, search_term):
         posts = cls.objects.filter(tag__tag__icontains=search_term)
         return posts
+
+   
 
 
 

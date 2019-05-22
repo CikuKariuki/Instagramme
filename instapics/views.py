@@ -15,7 +15,7 @@ def search_results(request):
         search_term = request.GET.get("post")
         searched_posts = Posts.search_by_tag(search_term)
         message = f"{search_term}"
-        return render(request,'search.html',{"message":message,"posts":searched_posts})
+        return render(request,'search.html',{"message":message,"posts":searched_posts,})
 
     else:
         message = "Invalid input"
