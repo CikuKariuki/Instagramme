@@ -49,6 +49,10 @@ class Profile(models.Model):
         profile = Profile.objects.filter(user = id).first()
         return profile
 
+    @classmethod
+    def search_by_user(cls, search_term):
+        users = cls.objects.filter(user__username__icontains=search_term)
+        return users
   
 
 

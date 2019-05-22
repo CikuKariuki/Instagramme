@@ -14,8 +14,9 @@ def search_results(request):
     if 'post' in request.GET and request.GET["post"]:
         search_term = request.GET.get("post")
         searched_posts = Posts.search_by_tag(search_term)
+        searched_users = Profile.search_by_user(search_term)
         message = f"{search_term}"
-        return render(request,'search.html',{"message":message,"posts":searched_posts,})
+        return render(request,'search.html',{"message":message,"posts":searched_posts, "users":searched_users })
 
     else:
         message = "Invalid input"

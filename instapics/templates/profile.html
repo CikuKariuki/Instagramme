@@ -8,13 +8,13 @@
        <div class="col-md-12">
            <div class="row top-section">
                <div class="col-md-5 profile-image">
-                   <img src="/media/default.png" alt="profile-photo" width="100" height="150">
+                   <img src="/media/default.png" alt="profile-photo" style="border:1px solid black;border-radius: 100%;"width="100" height="150">
                 
                 </div>
                <div class="col-md-5 text-center">
                    <ul class="list-inline">
                        <li class="list-inline-item">
-                           <span class="username">{{ profile.username }}</span>
+                           <span class="username" style="font-family: 'Cookie', cursive; font-size: 50px;">{{ profile.username }}</span>
                        </li>
                        {% if profile.username == user.username %}
                        <li class="list-inline-item">
@@ -51,7 +51,7 @@
        </div>
    </div>
    <hr>
-   <h3 style="text-align: center;">All Posts</h3>
+   <h3 style="text-align: center;font-family: 'Cookie', cursive;font-size: 50px;">All Posts</h3>
    <div class="row user-images">
        {% for post in posts %}
        <div class="col-md-4">
