@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{{block.super}}
 
 <div class="container top">
    <div class="row">
@@ -34,16 +35,16 @@
                            <span class="font-weight-bold">{{posts|length}} </span> Posts
                        </li>
                        <li class="list-inline-item">
-                           <span class="font-weight-bold">{{posts|length}}</span> Followers
+                           <span class="font-weight-bold"></span> 0 Followers
                        </li>
                        <li class="list-inline-item">
-                           <span class="font-weight-bold">{{posts|length}}</span> Following
+                           <span class="font-weight-bold"></span> 0 Following
                        </li>
                    </ul>
 
                    <p class="font3">{{profile_details.bio|safe}}</p>
                    {% if profile.username == user.username %}
-                   <a class="newpost mr-5" id="post" href="{% url 'new_post' %}" >+ NEW POST</a>
+                   <a class="newpost mr-5" id="post" href="{% url 'new_post' %}" ><img src="/media/add.png"></a>
                    {% endif %}
                </div>
            </div>
@@ -56,7 +57,7 @@
        <div class="col-md-4">
            <div class="card animated zoomInRight">
                <div class="card-img-top ">
-                   <img src="{{post.images.url}}" alt="" class="rgba-red-slight i" width="100%" height="350">
+                   <img src="{{post.images.url}}" alt="" class="rgba-red-slight i" width="400" height="350" style="padding:3%;">
                </div>
 
            </div>
