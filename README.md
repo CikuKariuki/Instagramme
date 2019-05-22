@@ -7,7 +7,9 @@ Wanjiku Kariuki
 ## Description
 An instagram clone. A user can sign up, log in and upload photos.
 
-## Setup Instructions:
+## Setup 
+| Instructions: |
+| :---------------------------- |
 | 1.Fork the repository to your work space. |
 | 2.Click on clone or download. |
 | 3.Run the git clone <'link copied'> on your terminal. |
