@@ -27,7 +27,7 @@ Python 3.6, Django
 | :------------- | :------------- | :--------------- |
 | Load website | website url | View posts,the person who uploaded|
 | Show caption | Click on post  | See the post close up |
-| Search by tag | A tag name | All pictures with that tag |
+| Search user |  username | User's picture with username that leads to user's profile |
 | Click on name on navbar | clicking on far right of navbar | Redirected to your own profile |
 
 
