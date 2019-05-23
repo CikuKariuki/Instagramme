@@ -10,17 +10,19 @@ def posts(request):
     posts = Posts.objects.all()
     return render(request,'posts.html',{"posts":posts})
 
-def search_results(request):
-    if 'post' in request.GET and request.GET["post"]:
-        search_term = request.GET.get("post")
-        searched_posts = Posts.search_by_tag(search_term)
-        searched_users = Profile.search_by_user(search_term)
-        message = f"{search_term}"
-        return render(request,'search.html',{"message":message,"posts":searched_posts, "users":searched_users })
 
+def search_results(request):
+    if 'users' in request.GET and request.GET['users']:
+        search_term = request.GET.get("users")
+        searched_users = Profile.search_by_users(search_term)
+        
+        message = f'{search_term}'
+        
+        return render(request,'search.html',{"message":message,"users":searched_users})
+    
     else:
-        message = "Invalid input"
-        return render(request,'search.html',{"message":message,})
+        message = "You haven't searched for any term"
+        return render(request,'search.html',{"message":message,"users":searched_users})
 
 @login_required(login_url='/accounts/login/')
 def new_post(request):

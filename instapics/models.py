@@ -49,11 +49,12 @@ class Profile(models.Model):
         profile = Profile.objects.filter(user = id).first()
         return profile
 
+  
     @classmethod
-    def search_by_user(cls, search_term):
+    def search_by_users(cls,search_term):
         users = cls.objects.filter(user__username__icontains=search_term)
         return users
-  
+
 
 
     def __str__(self):
@@ -71,10 +72,10 @@ class Posts(models.Model):
         posts = Posts.objects.filter(profile__pk=profile)
         return posts
 
-    @classmethod
-    def search_by_tag(cls, search_term):
-        posts = cls.objects.filter(tag__tag__icontains=search_term)
-        return posts
+    # @classmethod
+    # def search_by_tag(cls, search_term):
+    #     posts = cls.objects.filter(tag__tag__icontains=search_term)
+    #     return posts
 
    
 
